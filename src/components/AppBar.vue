@@ -1,38 +1,41 @@
 <template>
-    <nav class="navbar">
-      <div class="container">
-        <a class="logo" href="/">Avento-Agro</a>
-        <ul class="nav-links">
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/products">Products</router-link></li>
-          <li><router-link to="/about">About</router-link></li>
-          <li><router-link to="/contact">Contact</router-link></li>
-        </ul>
-      </div>
-    </nav>
-  </template>
-  
-  <script lang="ts" setup>
-  </script>
-  
-  <style scoped>
-  .navbar {
-    background-color: #4CAF50;
-    padding: 1rem;
-  }
-  .logo {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-  }
-  </style>
-  
+  <Menubar :model="items">
+    <template #start>
+      <router-link to="/" class="logo">Avento-Agro</router-link>
+    </template>
+  </Menubar>
+</template>
+
+<script lang="ts" setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import Menubar from 'primevue/menubar';
+
+const router = useRouter();
+const items = ref([
+  { label: 'Home', command: () => router.push('/') },
+  { label: 'Products', command: () => router.push('/products') },
+  { label: 'About', command: () => router.push('/about') },
+  { label: 'Contact', command: () => router.push('/contact') }
+]);
+</script>
+
+<style scoped>
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.p-menubar {
+  background-color: #4CAF50;
+}
+
+.p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+  color: white;
+}
+
+.p-menubar-root-list > .p-menuitem > .p-menuitem-link:hover {
+  background-color: #45a049;
+}
+</style>

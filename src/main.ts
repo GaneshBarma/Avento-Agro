@@ -13,6 +13,7 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 app.use(PrimeVue, {
+    ripple: true,
     theme: {
         preset: Aura,
         options: {
@@ -23,4 +24,3 @@ app.use(PrimeVue, {
     }
 });
 app.mount('#app')
-
