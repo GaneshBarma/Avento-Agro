@@ -1,7 +1,9 @@
 <template>
   <Menubar :model="items">
     <template #start>
-      <router-link to="/" class="logo">Avento-Agro</router-link>
+      <router-link to="/" class="logo-link">
+        <img src="@/assets/Logo.png" alt="Avento-Agro Logo" class="logo" @click="router.push('/')"/>
+      </router-link>
     </template>
   </Menubar>
 </template>
@@ -23,12 +25,20 @@ const items = ref([
 <style scoped>
 .logo {
   font-size: 1.5rem;
-  color: white;
-  text-decoration: none;
+  height: 4.5rem;
+  width: auto;
+  /* color: white;
+  text-decoration: none; */
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .p-menubar {
-  background-color: #4CAF50;
+  /* background-color: #4CAF50; */
 }
 
 .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
