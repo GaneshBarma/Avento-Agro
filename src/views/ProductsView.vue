@@ -1,7 +1,7 @@
 <template>
-    <div class="home">
-      <h1>Welcome to Avento-Agro</h1>
-      <p>Your partner in sustainable agriculture.</p>
+    <div class="products">
+      <h1>Our Products</h1>
+      <p>Explore our range of agricultural products.</p>
     </div>
   </template>
   
@@ -9,7 +9,7 @@
   </script>
   
   <style scoped>
-  .home {
+  .products {
     text-align: center;
     margin-top: 2rem;
   }
