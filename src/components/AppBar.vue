@@ -17,6 +17,9 @@
 
 <style scoped>
 .app-bar {
+  position: sticky;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,6 +27,7 @@
   background-color: var(--color-background);
   border-bottom: 1px solid var(--color-border);
   transition: background-color 0.5s, color 0.5s;
+  z-index: 1000; /* Ensure it is on top of other content */
 }
 
 .logo {
@@ -36,11 +40,6 @@
   height: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.logo-text {
-  font-size: 1.5rem;
-  color: var(--color-heading);
 }
 
 .nav-links {
