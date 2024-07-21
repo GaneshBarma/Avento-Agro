@@ -11,9 +11,9 @@
 </template>
 
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
-import AppBar from './components/AppBar.vue';
-import FooterBar from './components/FooterBar.vue';
+import { RouterView } from 'vue-router'
+import AppBar from './components/AppBar.vue'
+import FooterBar from './components/FooterBar.vue'
 </script>
 
 <style scoped>

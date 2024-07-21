@@ -12,18 +12,23 @@
   </header>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .app-bar {
+  position: sticky;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--color-background);
   border-bottom: 1px solid var(--color-border);
-  transition: background-color 0.5s, color 0.5s;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+  z-index: 1000; /* Ensure it is on top of other content */
 }
 
 .logo {
@@ -36,11 +41,6 @@
   height: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.logo-text {
-  font-size: 1.5rem;
-  color: var(--color-heading);
 }
 
 .nav-links {
@@ -64,7 +64,9 @@
   width: 0;
   height: 2px;
   background-color: var(--color-border-hover);
-  transition: width 0.3s ease, left 0.3s ease;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
 }
 
 .nav-link:hover {

@@ -1,5 +1,7 @@
 /* Import Montserrat font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import "primeflex/primeflex.scss";
+@import "primeicons/primeicons.css";
 
 /* Color palette from <https://github.com/vuejs/theme> */
 :root {
