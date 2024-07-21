@@ -2,9 +2,7 @@
   <div id="app">
     <AppBar />
     <main class="main-content">
-      <transition name="fade" mode="out-in">
-        <RouterView />
-      </transition>
+      <RouterView />
     </main>
     <FooterBar />
   </div>
@@ -19,6 +17,7 @@ import FooterBar from './components/FooterBar.vue'
 <style scoped>
 #app {
   display: flex;
+  position: relative;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
